@@ -1,0 +1,47 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://i.pinimg.com/originals/94/34/45/943445b758e0bdc4620dfb34f55ffe67.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+.container {
+    text-align: center;
+}
+
+canvas {
+    background-color: #000;
+    border: 2px solid #fff;
+    display: block;
+    margin: 20px auto;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+}
+
+button:hover {
+    background-color: #580d0d;
+}

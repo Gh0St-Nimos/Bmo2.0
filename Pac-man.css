@@ -1,0 +1,88 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffcc00; /* Cor forte para o título */
+}
+
+.game-area {
+    border: 5px solid #fff;
+    margin: 20px auto;
+    position: relative;
+}
+
+button {
+    background-color: #ff6600; /* Cor forte para os botões */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ff3300; /* Cor mais forte ao passar o mouse */
+}
+
+#score {
+    font-size: 18px;
+    margin-top: 10px;
+}
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffcc00; /* Cor forte para o título */
+}
+
+.game-area {
+    border: 5px solid #fff;
+    margin: 20px auto;
+    position: relative;
+}
+
+button {
+    background-color: #ff6600; /* Cor forte para os botões */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ff3300; /* Cor mais forte ao passar o mouse */
+}
+
+#score {
+    font-size: 18px;
+    margin-top: 10px;
+}

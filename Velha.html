@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="Velha.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Input dos nomes -->
+        <div class="name-inputs">
+            <div class="player-names">
+                <label for="player1">Jogador 1:</label>
+                <input type="text" id="player1" placeholder="Nome do Jogador 1">
+            </div>
+            <div class="player-names" id="player2-container">
+                <label for="player2">Jogador 2:</label>
+                <input type="text" id="player2" placeholder="Nome do Jogador 2">
+            </div>
+        </div>
+
+        <!-- Opções de modo de jogo -->
+        <div class="options">
+            <button id="human-vs-human" class="option">Humano vs Humano</button>
+            <button id="robot-vs-human" class="option">Robo vs Humano</button>
+        </div>
+
+        <!-- Tabuleiro do jogo -->
+        <div id="game-board"></div>
+        
+        <!-- Exibição do vencedor -->
+        <div id="winner-container">
+            <h2 id="winner-message"></h2>
+            <div id="winner-gif"></div>
+        </div>
+
+        <!-- Botões de controle abaixo do jogo -->
+        <div class="control-buttons">
+            <button id="reset-game">Resetar </button>
+            <button id="go-back">Voltar</button>
+        </div>
+
+    </div>
+
+    <script src="Velha.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Brick out.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos adicionais para o botão "Voltar" */
+        #go-back {
+            position: absolute; /* Fixa o botão em relação à tela */
+            top: 20px; /* Distância do topo */
+            right: 20px; /* Distância da direita */
+            padding: 10px 20px; /* Espaçamento interno do botão */
+            background-color: #0095DD; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            border: none; /* Sem borda */
+            cursor: pointer; /* Muda o cursor para pointer */
+            font-family: 'Press Start 2P', cursive; /* Fonte estilizada */
+        }
+
+        #go-back:hover {
+            background-color: #007bb5; /* Cor de fundo ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Brick Out</h1>
+        <canvas id="brickCanvas" width="480" height="320"></canvas>
+        <div class="controls">
+            <button id="start-game">Iniciar Jogo</button>
+            <button id="reset-game">Resetar Jogo</button>
+        </div>
+        <button id="go-back">Voltar</button> <!-- Botão para voltar à página jogo.html -->
+    </div>
+    
+    <script src="Brick out.js"></script>
+</body>
+</html>

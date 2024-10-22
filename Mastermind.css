@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', sans-serif; /* Fonte pixelizada */
+    background-color: #b2e4d4; /* Cor de fundo geral */
+    color: #333; /* Cor do texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima da tela */
+    margin: 0; /* Remove margens */
+    position: relative; /* Para permitir o uso do GIF de fundo */
+}
+
+.container {
+    border: 5px solid #3f8b6c; /* Borda verde pastel */
+    background-color: #60c4ac; /* Tom de verde mar */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do container */
+    width: 400px; /* Largura do container */
+    height: auto; /* Altura automática para permitir mais espaço */
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens dentro do container */
+}
+
+.gif-space {
+    width: 60%; /* Largura total do container */
+    height: 100px; /* Altura reduzida do espaço do GIF */
+    background-color: #4d9e85; /* Cor de fundo do espaço do GIF */
+    border-radius: 5px; /* Cantos arredondados */
+    margin-bottom: 20px; /* Espaço abaixo do GIF */
+    overflow: hidden; /* Esconde qualquer parte que extrapole os limites */
+    display: flex; /* Adiciona flexbox para centralizar a imagem */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.gif-space img {
+    max-width: 150%; /* Define a largura máxima da imagem */
+    max-height: 250%; /* Define a altura máxima da imagem */
+    object-fit: contain; /* Mantém a proporção sem cortar a imagem */
+}
+
+h1 {
+    text-align: center; /* Centraliza o título */
+    color: #f9f9f9; /* Cor do texto do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+}
+
+button {
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelizada */
+    font-size: 14px; /* Tamanho da fonte */
+    background-color: #3f8b6c; /* Cor de fundo dos botões */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: 2px solid #b2e4d4; /* Borda suave */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    text-transform: uppercase; /* Texto em maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+    margin: 10px; /* Espaçamento entre os botões */
+    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+button:hover {
+    background-color: #2e6e5a; /* Cor ao passar o mouse */
+}
+
+/* Novo estilo para o container do cronômetro e tentativas */
+.sidebar-container {
+    position: absolute; /* Posiciona o container de forma absoluta */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância do lado direito */
+    border: 5px solid #3f8b6c; /* Borda verde pastel */
+    background-color: #60c4ac; /* Tom de verde mar */
+    border-radius: 10px; /* Cantos arredondados */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do container */
+    display: flex; /* Flexbox para alinhar o conteúdo */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens dentro do container */
+}
+
+.timer, .remaining-attempts {
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelizada */
+    font-size: 16px; /* Tamanho da fonte */
+    color: #fff; /* Cor do texto */
+    margin: 5px 0; /* Margem entre os elementos */
+}
+
+/* Adicione o GIF de fundo */
+body::before {
+    content: '';
+    position: absolute; /* Fixa o GIF de fundo */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://i.pinimg.com/originals/39/fa/2a/39fa2a8880ada04fd5eeaa8b1a2e5865.gif') no-repeat center center fixed;
+    background-size: cover; /* Faz o GIF cobrir toda a tela */
+    z-index: -1; /* Coloca o GIF atrás do conteúdo */
+}
+.correct {
+    color: green; /* Cor verde para números corretos */
+    font-weight: bold; /* Negrito para destacar */
+}
+
+.wrong {
+    color: red; /* Cor vermelha para números errados */
+    font-weight: bold; /* Negrito para destacar */
+}
+input[type="text"] {
+    font-family: 'Press Start 2P', cursive; /* Fonte pixelizada */
+    font-size: 16px; /* Tamanho da fonte */
+    background-color: #3f8b6c; /* Cor de fundo do campo */
+    color: #fff; /* Cor do texto */
+    border: 3px solid #b2e4d4; /* Borda suave ao redor do input */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px; /* Espaçamento interno */
+    width: 80%; /* Largura do input */
+    margin-bottom: 20px; /* Espaçamento abaixo do input */
+    text-align: center; /* Centraliza o texto dentro do input */
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra ao redor */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+input[type="text"]:focus {
+    outline: none; /* Remove o contorno padrão */
+    background-color: #3c7c6d; /* Altera a cor de fundo ao focar */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adiciona um brilho ao focar */
+}
+
+input[type="text"]::placeholder {
+    color: #b2e4d4; /* Cor do placeholder */
+    opacity: 0.7; /* Torna o placeholder mais suave */
+}

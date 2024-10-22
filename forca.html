@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forca.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Forca</h1>
+        <div class="forca">
+            <canvas id="forcaCanvas" width="200" height="200"></canvas>
+        </div>
+        <div class="word">
+            <p id="wordDisplay"></p>
+        </div>
+        <div class="controls">
+            <input type="text" id="letterInput" maxlength="1" placeholder="Digite uma letra" />
+            <button id="guessButton">Chutar</button>
+            <button id="resetButton">Resetar Jogo</button>
+        </div>
+        <p id="message"></p>
+        <button id="go-back">Voltar ao Menu</button>
+    </div>
+    
+    <script src="forca.js"></script>
+</body>
+</html>

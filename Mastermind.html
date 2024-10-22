@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> <!-- Fonte Pixelizada -->
+    <link rel="stylesheet" href="Mastermind.css"> <!-- Caminho para o CSS -->
+</head>
+<body>
+    <div class="container">
+        <h2>Mastermind</h2>
+        <div class="gif-space">
+            <img src="C:\Users\Desktop\Downloads\BMO - Adventure time (2) (1).gif" alt="GIF do jogo">
+        </div>
+        
+        <div class="difficulty-display">
+            Dificuldade: 
+            <select id="difficulty-input">
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+        <input type="text" id="guess" placeholder="Insira seu palpite (4-10 dígitos)">
+        <button id="submit">Enviar Palpite</button>
+        <button id="reset">Resetar Jogo</button>
+        
+        <div id="result-container" style="display:none;">
+            <h3>Resultados</h3>
+            <div id="results"></div>
+        </div>
+        
+        <div id="attempts"></div>
+
+        <button id="back-to-menu" onclick="window.location.href='play.html'">Voltar</button>
+    </div>
+
+    <div class="sidebar-container">
+        <div id="timer" class="timer">00:00</div>
+        <div id="remaining-attempts" class="remaining-attempts">10</div>
+    </div>
+    
+    <script src="mastermind.js"></script>
+</body>
+</html>
