@@ -11,8 +11,8 @@ const guessButton = document.getElementById("guessButton");
 const resetButton = document.getElementById("resetButton");
 const message = document.getElementById("message");
 const goBackButton = document.getElementById("go-back");
+const gifDerrota = document.getElementById("gifDerrota"); 
 
-// Iniciar o jogo
 function startGame() {
     selectedWord = words[Math.floor(Math.random() * words.length)];
     guessedLetters = [];
@@ -20,14 +20,14 @@ function startGame() {
     drawHangman();
     displayWord();
     message.textContent = "";
+    gifDerrota.style.display = "none"; 
 }
 
-// Mostrar a palavra com letras adivinhadas
 function displayWord() {
     wordDisplay.textContent = selectedWord.split("").map(letter => guessedLetters.includes(letter) ? letter : "_").join(" ");
 }
 
-// Adicionar uma letra à tentativa
+// tentativa
 function guessLetter() {
     const letter = letterInput.value.toLowerCase();
     letterInput.value = "";
@@ -43,10 +43,10 @@ function guessLetter() {
     }
 }
 
-// Verifica se o jogo acabou
 function checkGameOver() {
     if (attempts === 0) {
         message.textContent = "Você perdeu! A palavra era: " + selectedWord;
+        exibirGifDerrota(); 
     } else if (selectedWord.split("").every(letter => guessedLetters.includes(letter))) {
         message.textContent = "Você ganhou!";
     }
@@ -56,7 +56,7 @@ function checkGameOver() {
 function drawHangman() {
     ctx.clearRect(0, 0, forcaCanvas.width, forcaCanvas.height);
     
-    // Desenho da forca
+    // Desenho da tortura
     ctx.beginPath();
     ctx.moveTo(50, 150);
     ctx.lineTo(150, 150);
@@ -65,8 +65,7 @@ function drawHangman() {
     ctx.lineTo(150, 50);
     ctx.lineTo(150, 70);
     ctx.stroke();
-
-    // Desenhos da cabeça, corpo, braços e pernas
+//rascunho do caralho do stick
     if (attempts < 6) {
         ctx.beginPath();
         ctx.arc(150, 80, 10, 0, Math.PI * 2); // Cabeça
@@ -75,33 +74,43 @@ function drawHangman() {
     if (attempts < 5) {
         ctx.beginPath();
         ctx.moveTo(150, 90);
-        ctx.lineTo(150, 120); // Corpo
+        ctx.lineTo(150, 120); // Corpo do stick
         ctx.stroke();
     }
     if (attempts < 4) {
         ctx.beginPath();
         ctx.moveTo(150, 100);
-        ctx.lineTo(130, 110); // Braço esquerdo
+        ctx.lineTo(130, 110); // Braço esquerdo do stick
         ctx.moveTo(150, 100);
-        ctx.lineTo(170, 110); // Braço direito
+        ctx.lineTo(170, 110); // Braço direito do stick
         ctx.stroke();
     }
     if (attempts < 3) {
         ctx.beginPath();
         ctx.moveTo(150, 120);
-        ctx.lineTo(130, 140); // Perna esquerda
+        ctx.lineTo(130, 140); // Perna esquerda do stick
         ctx.moveTo(150, 120);
-        ctx.lineTo(170, 140); // Perna direita
+        ctx.lineTo(170, 140); // Perna direita do stick
         ctx.stroke();
     }
 }
 
-// Reiniciar o jogo
+function exibirGifDerrota() {
+    gifDerrota.style.display = "block"; 
+}
+
+// Reiniciar a sessão de tortura do stick
 resetButton.addEventListener("click", startGame);
 guessButton.addEventListener("click", guessLetter);
 goBackButton.addEventListener("click", () => {
     window.location.href = 'jogo.html';
 });
 
-// Iniciar o jogo na carga da página
+// a PORRA do Enter:)
+letterInput.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        guessLetter();
+    }
+});
+
 startGame();
