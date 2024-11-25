@@ -36,7 +36,7 @@ for (let c = 0; c < brickColumnCount; c++) {
 
 // Carregando a imagem para a bolinha
 const ballImage = new Image();
-ballImage.src = 'https://i.pinimg.com/736x/29/bb/8e/29bb8e2b9d99779be8d686873c8acbf4.jpg'; // Coloque a URL da sua imagem
+ballImage.src = 'https://i.pinimg.com/736x/29/bb/8e/29bb8e2b9d99779be8d686873c8acbf4.jpg'; 
 
 // Detecta teclas pressionadas
 document.addEventListener("keydown", keyDownHandler, false);
@@ -61,7 +61,7 @@ function keyUpHandler(e) {
 // Desenha a bolinha
 function drawBall() {
     ctx.beginPath();
-    ctx.drawImage(ballImage, x - ballRadius, y - ballRadius, ballRadius * 2, ballRadius * 2); // Desenha a imagem da bolinha
+    ctx.drawImage(ballImage, x - ballRadius, y - ballRadius, ballRadius * 2, ballRadius * 2); 
     ctx.closePath();
 }
 
